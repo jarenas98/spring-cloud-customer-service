@@ -1,6 +1,9 @@
 package com.co.example.store.customer.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -10,8 +13,10 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Data
+@Builder
 @Entity
 @Table(name = "tbl_customers")
+@NoArgsConstructor @AllArgsConstructor
 public class Customer implements Serializable {
 
     @Id
